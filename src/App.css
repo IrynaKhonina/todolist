@@ -6,6 +6,7 @@
 .App > div {
   margin-right: 50px;
 }
+<<<<<<< HEAD
 
 .error {
   border: red 1px solid;
@@ -26,3 +27,31 @@
   display: flex;
   align-items: center;
 }
+=======
+.todolist {
+ background-color: burlywood;
+ border: 2px solid darkgray;
+ border-radius: 5px;
+ padding: 15px;
+}
+
+
+.task {
+  font-weight: bold;
+}
+.task-done{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.btn-filter-active{
+background-color: blueviolet;
+color: white;
+border: 2px solid blueviolet;
+border-radius: 3px;
+}
+
+.error{
+  border: 2px solid red;
+  outline: none;
+}
+>>>>>>> 85d3a372dc239156b7f2c35fe7f163946c2bf4ff
