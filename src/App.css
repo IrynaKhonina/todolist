@@ -1,57 +1,28 @@
 .App {
-  padding: 30px;
-  display: flex;
+  /*padding: 30px;*/
+  /*display: flex;*/
 }
 
-.App > div {
-  margin-right: 50px;
-}
-<<<<<<< HEAD
+/*.App > div {*/
+/*  margin-right: 50px;*/
+/*}*/
 
-.error {
-  border: red 1px solid;
-}
+/*.error {*/
+/*  border: red 1px solid;*/
+/*}*/
 
-.error-message {
-  color: red;
-}
+/*.error-message {*/
+/*  color: red;*/
+/*}*/
 
-.active-filter {
-  background-color: lightgreen;
-}
+/*.active-filter {*/
+/*  background-color: lightgreen;*/
+/*}*/
 
-.is-done {
-  opacity: 0.5;
-}
-.todolist-title-container {
-  display: flex;
-  align-items: center;
-}
-=======
-.todolist {
- background-color: burlywood;
- border: 2px solid darkgray;
- border-radius: 5px;
- padding: 15px;
-}
-
-
-.task {
-  font-weight: bold;
-}
-.task-done{
-  text-decoration: line-through;
-  opacity: 0.5;
-}
-.btn-filter-active{
-background-color: blueviolet;
-color: white;
-border: 2px solid blueviolet;
-border-radius: 3px;
-}
-
-.error{
-  border: 2px solid red;
-  outline: none;
-}
->>>>>>> 85d3a372dc239156b7f2c35fe7f163946c2bf4ff
+/*.is-done {*/
+/*  opacity: 0.5;*/
+/*}*/
+/*.todolist-title-container {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
