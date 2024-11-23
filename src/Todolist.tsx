@@ -23,11 +23,11 @@ export const Todolist = (props: PropsType) => {
 		title,
 		tasks,
 		filter,
-		todolistId,
 		removeTask,
 		changeFilter,
 		addTask,
 		changeTaskStatus,
+		todolistId,
 		removeTodolist,
 		changeTodolistTitle,
 		changeTaskTitle
