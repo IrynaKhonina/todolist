@@ -75,7 +75,7 @@ export const Todolists = () => {
                                 changeFilter={changeFilter}
                                 addTask={addTask}
                                 changeTaskStatus={changeTaskStatus}
-                                                               updateTask={updateTask}
+                                updateTask={updateTask}
                             />
                         </Paper>
                     </Grid>

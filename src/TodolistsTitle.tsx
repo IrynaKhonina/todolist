@@ -6,11 +6,11 @@ import {useAppDispatch} from "./app/hooks";
 import {TodolistType} from "./app/App";
 
 
-type Props ={
+type Props = {
     todolist: TodolistType
 }
 
-export const TodolistsTitle = ({todolist}:Props) => {
+export const TodolistsTitle = ({todolist}: Props) => {
 
 
     const dispatch = useAppDispatch()
@@ -21,7 +21,7 @@ export const TodolistsTitle = ({todolist}:Props) => {
 
 
     const updateTodolist = (title: string) => {
-        dispatch(changeTodolistTitleAC({id:todolist.id, title}))
+        dispatch(changeTodolistTitleAC({id: todolist.id, title}))
     }
 
     return (
