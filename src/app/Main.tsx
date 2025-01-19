@@ -1,9 +1,9 @@
 import Grid from "@mui/material/Grid2";
-import {AddItemForm} from "./AddItemForm";
+import {AddItemForm} from "../common/components/AddItemForm/AddItemForm";
 import Container from "@mui/material/Container";
-import {addTodolistAC} from "./model/todolists-reducer";
-import {useAppDispatch} from "./app/hooks";
-import {Todolists} from "./Todolists";
+import {addTodolistAC} from "../features/todolists/model/todolists-reducer";
+import {useAppDispatch} from "./hooks";
+import {Todolists} from "../features/todolists/ui/Todolists/Todolists";
 
 
 export const Main = () => {

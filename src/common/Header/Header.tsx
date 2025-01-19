@@ -1,13 +1,13 @@
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import {MenuButton} from "./MenuButton";
+import {MenuButton} from "../ MenuButton/MenuButton";
 import Switch from "@mui/material/Switch";
 import AppBar from "@mui/material/AppBar";
-import {changeThemeAC} from "./app/app-reducer";
-import {useAppDispatch, useAppSelector} from "./app/hooks";
-import {selectThemeMode} from "./app/app-selectors";
-import {getTheme} from "./common/theme/theme";
+import {changeThemeAC} from "../../app/app-reducer";
+import {useAppDispatch, useAppSelector} from "../../app/hooks";
+import {selectThemeMode} from "../../app/app-selectors";
+import {getTheme} from "../theme/theme";
 
 
 export const Header = () => {

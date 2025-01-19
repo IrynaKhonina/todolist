@@ -1,11 +1,10 @@
-import './App.css';
 import CssBaseline from "@mui/material/CssBaseline";
 import {ThemeProvider} from '@mui/material/styles';
 import {useAppSelector} from "./hooks";
 import {selectThemeMode} from "./app-selectors";
 import {getTheme} from "../common/theme/theme";
-import {Header} from "../Header";
-import {Main} from "../Main";
+import {Header} from "../common/Header/Header";
+import {Main} from "./Main";
 
 export type TaskType = {
     id: string
