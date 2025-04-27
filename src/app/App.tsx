@@ -17,7 +17,7 @@ export const App = () => {
       <div className={"app"}>
         <CssBaseline />
         <Header />
-        <Main />
+        <Header />
         <Main />
         <ErrorSnackbar />
       </div>
