@@ -18,6 +18,7 @@ export const App = () => {
         <CssBaseline />
         <Header />
         <Main />
+        <Main />
         <ErrorSnackbar />
       </div>
     </ThemeProvider>
