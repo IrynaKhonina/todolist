@@ -1,4 +1,4 @@
-import "./App.css"
+import styles from "./App.module.css"
 import { selectThemeMode } from "@/app/app-slice"
 import { ErrorSnackbar, Header } from "@/common/components"
 import { useAppDispatch, useAppSelector } from "@/common/hooks"
@@ -19,7 +19,9 @@ export const App = () => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    dispatch(meTC())
+    dispatch(meTC()).then(()=>{
+      setIsInitialized(true)
+    })
   }, [])
 
   if (!isInitialized) {
@@ -32,7 +34,7 @@ export const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={"app"}>
+      <div className={styles.app}>
         <CssBaseline />
         <Header />
         <Routing />
