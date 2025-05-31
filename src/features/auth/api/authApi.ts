@@ -1,20 +1,15 @@
 import { instance } from "@/common/instance"
-
-import { LoginInputs } from "@/features/auth/lib/schemas"
 import type { BaseResponse } from "@/common/types"
-import { MeResponse } from "@/features/auth/api/authApi.types.ts"
+import type { LoginArgs } from "./authApi.types"
 
 export const authApi = {
-  login(args: LoginInputs) {
-    return instance.post<BaseResponse<{ userId: number; token: string }>>(`/auth/login`, args)
+  login(payload: LoginArgs) {
+    return instance.post<BaseResponse<{ userId: number; token: string }>>("auth/login", payload)
   },
-
   logout() {
-    return instance.delete<BaseResponse>(`/auth/login`)
+    return instance.delete<BaseResponse>("auth/login")
   },
   me() {
-    return instance.get<BaseResponse<MeResponse> >(`/auth/me`)
+    return instance.get<BaseResponse<{ id: number; email: string; login: string }>>("auth/me")
   },
 }
-
-

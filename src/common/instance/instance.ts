@@ -1,5 +1,5 @@
-import axios from "axios"
 import { AUTH_TOKEN } from "@/common/constants"
+import axios from "axios"
 
 export const instance = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
@@ -9,7 +9,6 @@ export const instance = axios.create({
 })
 
 instance.interceptors.request.use(function (config) {
-  const token = localStorage.getItem(AUTH_TOKEN)
-  config.headers.Authorization = `Bearer ${token}`
+  config.headers["Authorization"] = `Bearer ${localStorage.getItem(AUTH_TOKEN)}`
   return config
 })

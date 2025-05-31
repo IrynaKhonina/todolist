@@ -1,5 +1,6 @@
 import { setAppStatusAC } from "@/app/app-slice"
 import type { RootState } from "@/app/store"
+import { clearDataAC } from "@/common/actions"
 import { ResultCode } from "@/common/enums"
 import { createAppSlice, handleServerAppError, handleServerNetworkError } from "@/common/utils"
 import { tasksApi } from "@/features/todolists/api/tasksApi"
@@ -20,6 +21,9 @@ export const tasksSlice = createAppSlice({
       .addCase(deleteTodolistTC.fulfilled, (state, action) => {
         delete state[action.payload.id]
       })
+      .addCase(clearDataAC, () => {
+        return {}
+      })
   },
   reducers: (create) => ({
     fetchTasksTC: create.asyncThunk(
@@ -30,8 +34,8 @@ export const tasksSlice = createAppSlice({
           const tasks = DomainTaskSchema.array().parse(res.data.items)
           dispatch(setAppStatusAC({ status: "succeeded" }))
           return { todolistId, tasks }
-        } catch (error) {
-          handleServerNetworkError(dispatch, error)
+        } catch (error: any) {
+          handleServerNetworkError(error, dispatch)
           return rejectWithValue(null)
         }
       },
@@ -53,8 +57,8 @@ export const tasksSlice = createAppSlice({
             handleServerAppError(res.data, dispatch)
             return rejectWithValue(null)
           }
-        } catch (error) {
-          handleServerNetworkError(dispatch, error)
+        } catch (error: any) {
+          handleServerNetworkError(error, dispatch)
           return rejectWithValue(null)
         }
       },
@@ -76,8 +80,8 @@ export const tasksSlice = createAppSlice({
             handleServerAppError(res.data, dispatch)
             return rejectWithValue(null)
           }
-        } catch (error) {
-          handleServerNetworkError(dispatch, error)
+        } catch (error: any) {
+          handleServerNetworkError(error, dispatch)
           return rejectWithValue(null)
         }
       },
@@ -125,8 +129,8 @@ export const tasksSlice = createAppSlice({
             handleServerAppError(res.data, dispatch)
             return rejectWithValue(null)
           }
-        } catch (error) {
-          handleServerNetworkError(dispatch, error)
+        } catch (error: any) {
+          handleServerNetworkError(error, dispatch)
           return rejectWithValue(null)
         }
       },
