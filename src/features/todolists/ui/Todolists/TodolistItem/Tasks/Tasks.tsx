@@ -12,7 +12,10 @@ type Props = {
 export const Tasks = ({ todolist }: Props) => {
   const { id, filter } = todolist
 
-  const { data, isLoading } = useGetTasksQuery(id)
+  const { data, isLoading } = useGetTasksQuery({
+    todolistId: id,
+    params: { count: 4, page: 1 },
+  })
 
   let filteredTasks = data?.items
   if (filter === "active") {
