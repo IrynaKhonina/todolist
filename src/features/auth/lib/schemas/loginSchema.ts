@@ -1,12 +1,13 @@
-import { z } from "zod"
+import { z } from "zod/v4"
 
 export const loginSchema = z.object({
-  email: z.string().min(1, { message: "Email is required" }).email({ message: "Incorrect email address" }),
+  email: z.email({ error: 'Incorrect email address' }),
   password: z
     .string()
-    .min(1, { message: "Password is required" })
-    .min(3, { message: "Password must be at least 3 characters long" }),
-  rememberMe: z.boolean(),
+    .min(1, { error: 'Password is required' })
+    .min(3, { error: 'Password must be at least 3 characters long' }),
+  rememberMe: z.boolean().optional(),
+  captcha: z.string().optional(),
 })
 
-export type Inputs = z.infer<typeof loginSchema>
+export type LoginInputs = z.infer<typeof loginSchema>

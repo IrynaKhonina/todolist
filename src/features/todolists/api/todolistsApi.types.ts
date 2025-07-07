@@ -1,10 +1,10 @@
-import { z } from "zod"
+import { z } from "zod/v4"
 
-export const TodolistSchema = z.object({
+export const todolistSchema = z.object({
   id: z.string(),
   title: z.string(),
-  addedDate: z.string(),
-  order: z.number(),
+  addedDate: z.iso.datetime({ local: true }),
+  order: z.int(),
 })
 
-export type Todolist = z.infer<typeof TodolistSchema>
+export type Todolist = z.infer<typeof todolistSchema>

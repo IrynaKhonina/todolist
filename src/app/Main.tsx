@@ -2,7 +2,7 @@ import { CreateItemForm } from "@/common/components/CreateItemForm/CreateItemFor
 import { useAddTodolistMutation } from "@/features/todolists/api/todolistsApi"
 import { Todolists } from "@/features/todolists/ui/Todolists/Todolists"
 import Container from "@mui/material/Container"
-import Grid from "@mui/material/Grid2"
+import Grid from "@mui/material/Grid"
 
 export const Main = () => {
   const [addTodolist] = useAddTodolistMutation()
