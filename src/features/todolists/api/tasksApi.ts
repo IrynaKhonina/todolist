@@ -8,7 +8,7 @@ export const tasksApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getTasks: build.query<
       GetTasksResponse,
-      { todolistId: string; params: { count: number; page: number } }
+      { todolistId: string; params: { page: number } }
     >({
       query: ({ todolistId, params }) => ({
         url: `todo-lists/${todolistId}/tasks`,
