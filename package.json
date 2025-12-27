@@ -6,10 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
-    "build": "tsc -b && vite build --base=./",
+    "build": "tsc -b && vite build",
     "test": "vitest",
     "preview": "vite preview",
-    "predeploy" : "pnpm run build",
+    "predeploy": "pnpm run build",
+    "deploy:gh": "pnpm run build",
+    "deploy:vercel": "vercel --prod",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -25,7 +27,7 @@
     "react-dom": "19.0.0",
     "react-hook-form": "^7.56.4",
     "react-redux": "9.2.0",
-    "react-router": "^7.6.0",
+    "react-router": "^7.6.3",
     "zod": "^3.25.3"
   },
   "devDependencies": {
@@ -37,6 +39,9 @@
     "prettier": "3.4.2",
     "typescript": "5.7.3",
     "vite": "6.0.7",
+    "@vercel/node": "^5.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
     "vitest": "2.1.8"
   }
 }
