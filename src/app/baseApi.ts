@@ -12,6 +12,7 @@ export const baseApi = createApi({
   baseQuery: async (args, api, extraOptions) => {
     const result = await fetchBaseQuery({
       baseUrl: import.meta.env.VITE_BASE_URL,
+      credentials: "include",
       prepareHeaders: (headers) => {
         headers.set("API-KEY", import.meta.env.VITE_API_KEY)
         headers.set("Authorization", `Bearer ${localStorage.getItem(AUTH_TOKEN)}`)
