@@ -10,8 +10,6 @@
     "test": "vitest",
     "preview": "vite preview",
     "predeploy": "pnpm run build",
-    "deploy:gh": "pnpm run build",
-    "deploy:vercel": "vercel --prod",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
