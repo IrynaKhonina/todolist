@@ -6,7 +6,7 @@ import { Provider } from "react-redux"
 import { BrowserRouter } from "react-router"
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/todolist">
     <Provider store={store}>
       <App />
     </Provider>
