@@ -1,23 +1,18 @@
-# IT-INCUBATOR Todolist Project
+# IT-INCUBATOR CheckFlow (todolist) Project
 
-## React + TypeScript + Vite
+## CheckFlow
 
-This template provides a minimal setup to get React working in Vite.
+Frontend pet-project focused on clean architecture and scalability.
 
-## Getting Started
+### Tech stack
+React, TypeScript, Vite, REST API
 
-### 1. Install dependencies:
+### Key features
+- Feature-based architecture
+- Authentication & protected routes
+- API abstraction
+- Error handling
+- Reusable components
 
-```bash
-pnpm i
-```
-
-### 2. Start app:
-
-```bash
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-Happy hacking 🚀
+### Purpose
+Show architectural thinking and real-world frontend approach.
