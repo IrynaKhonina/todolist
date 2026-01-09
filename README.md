@@ -2,17 +2,27 @@
 
 ## CheckFlow
 
-Frontend pet-project focused on clean architecture and scalability.
+Frontend pet-project focused on scalable architecture and real-world patterns.
 
 ### Tech stack
-React, TypeScript, Vite, REST API
+- React 19
+- TypeScript
+- Redux Toolkit
+- React Router
+- React Hook Form + Zod
+- Axios
+- Material UI
+- Vite
+- Vitest
 
-### Key features
-- Feature-based architecture
-- Authentication & protected routes
-- API abstraction
+### Features
+- Authentication and protected routes
+- Centralized state management
+- Form validation with schema-based approach
+- REST API integration
 - Error handling
-- Reusable components
+- Reusable UI components
 
 ### Purpose
-Show architectural thinking and real-world frontend approach.
+This project demonstrates my approach to frontend architecture,
+state management, and building applications close to production scenarios.
